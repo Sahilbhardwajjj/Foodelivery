@@ -1,10 +1,6 @@
 module.exports = async function handler(req, res) {
   try {
-    const {
-      lat = "18.5204303",
-      lng = "73.8567437",
-      restaurantId,
-    } = req.query;
+    const { lat = "18.5204303", lng = "73.8567437", restaurantId } = req.query;
 
     if (!restaurantId) {
       return res.status(400).json({ error: "restaurantId is required" });
